@@ -1,0 +1,267 @@
+:root {
+    --primary: #4f46e5;
+    --primary-light: #6366f1;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+    --success: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1b2432;
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline
+}
+
+.container {
+    background-color: #262c3a;
+    border-radius: 20px;
+    box-shadow: 0 0px 30px 20px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.upload-area {
+    border: 2px dashed var(--gray);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-light);
+    background-color: rgba(79, 70, 229, 0.05);
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.upload-text {
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.upload-text strong {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+#imagePreview {
+    margin: 1.5rem 0;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: none;
+}
+
+#imagePreview img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0.5rem;
+    width: 70%;
+}
+
+button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+    transform: none;
+}
+
+#outputText {
+    background-color: #1f2937;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    white-space: pre-wrap;
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+    color: #868d99;
+}
+
+#copyBtn {
+    background-color: #00cc88;
+    /* vibrant green */
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 8px 20px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(0, 255, 170, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+#copyBtn:hover {
+    background-color: #0d9f6e;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 12px 25px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 255, 170, 0.3);
+
+}
+
+.status {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1b2432;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1000;
+
+}
+
+.instructions {
+    justify-content: center;
+    display: flex;
+    ;
+
+}
+
+.instructions div {
+    margin-right: 40px;
+    margin-left: 40px;
+
+
+
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    background-color: #2c2f5e;
+    /* adjust to your preferred color */
+    color: white;
+    border-radius: 50%;
+    /* makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 auto;
+    /* centers it horizontally */
+
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    /* stack items vertically */
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* center vertically */
+
+
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    /* stack items vertically */
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* center vertically */
+}
+
+
+
+.third {
+    display: flex;
+    flex-direction: column;
+    /* stack items vertically */
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* center vertically */
+}
+
+h3 {
+    font-weight: 500;
+    color: #9ea5bb;
+
+}

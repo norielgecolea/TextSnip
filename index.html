@@ -1,177 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TextSnip - Screenshot to Text Converter</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
-  <style>
-    :root {
-      --primary: #4f46e5;
-      --primary-light: #6366f1;
-      --dark: #1e293b;
-      --light: #f8fafc;
-      --gray: #94a3b8;
-      --success: #10b981;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f1f5f9;
-      color: var(--dark);
-      line-height: 1.6;
-      padding: 20px;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .container {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-      padding: 2.5rem;
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-    }
-    
-    h1 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-    
-    #imageUpload {
-      display: none;
-    }
-    
-    .upload-area {
-      border: 2px dashed var(--gray);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    
-    .upload-area:hover {
-      border-color: var(--primary-light);
-      background-color: rgba(79, 70, 229, 0.05);
-    }
-    
-    .upload-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-    
-    .upload-text {
-      font-size: 1rem;
-      color: var(--gray);
-    }
-    
-    .upload-text strong {
-      color: var(--primary);
-      font-weight: 500;
-    }
-    
-    #imagePreview {
-      margin: 1.5rem 0;
-      max-height: 300px;
-      overflow: hidden;
-      border-radius: 8px;
-      display: none;
-    }
-    
-    #imagePreview img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-    
-    button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      margin: 0.5rem;
-    }
-    
-    button:hover {
-      background-color: var(--primary-light);
-      transform: translateY(-1px);
-    }
-    
-    button:disabled {
-      background-color: var(--gray);
-      cursor: not-allowed;
-      transform: none;
-    }
-    
-    #outputText {
-      background-color: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      text-align: left;
-      white-space: pre-wrap;
-      min-height: 100px;
-      max-height: 300px;
-      overflow-y: auto;
-      font-family: 'Inter', sans-serif;
-    }
-    
-    #copyBtn {
-      background-color: var(--success);
-    }
-    
-    #copyBtn:hover {
-      background-color: #0d9f6e;
-    }
-    
-    .status {
-      margin: 1rem 0;
-      font-size: 0.9rem;
-      color: var(--gray);
-    }
-    
-    @media (max-width: 640px) {
-      .container {
-        padding: 1.5rem;
-      }
-      
-      h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
   <div class="container">
     <h1><span>📷</span> TextSnip</h1>
     <p class="subtitle">Extract text from your screenshots instantly</p>
-    
+
     <label for="imageUpload">
       <div class="upload-area" id="uploadArea">
         <div class="upload-icon">📁</div>
@@ -180,17 +23,55 @@
       </div>
     </label>
     <input type="file" id="imageUpload" accept="image/*" />
-    
+
     <div id="imagePreview"></div>
-    
+
     <button id="extractBtn" disabled>Extract Text</button>
     <p class="status" id="status">Ready to upload</p>
-    
-    <pre id="outputText">Extracted text will appear here...</pre>
-    
-    <button id="copyBtn" disabled>Copy Text</button>
-  </div>
 
+    <pre id="outputText">Extracted text will appear here...</pre>
+
+    <button id="copyBtn" disabled>Copy Text</button>
+
+
+
+
+
+
+
+  </div>
+  <footer>
+    <div class="instructions">
+
+      <div class="first">
+        <div class="circle">1</div>
+        <h3>Upload Image</h3>
+      </div>
+
+      <div class="second">
+        <div class="circle">2</div>
+        <h3>
+          Extract Text
+        </h3>
+      </div>
+
+      <div class="third">
+        <div class="circle">3</div>
+        <h3>
+          Copy Text
+        </h3>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.1/dist/tesseract.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -201,63 +82,63 @@
       const outputText = document.getElementById('outputText');
       const copyBtn = document.getElementById('copyBtn');
       const status = document.getElementById('status');
-      
+
       // Handle file upload
       imageUpload.addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (file) {
           const reader = new FileReader();
-          
+
           reader.onload = (event) => {
             imagePreview.innerHTML = `<img src="${event.target.result}" alt="Uploaded Image">`;
             imagePreview.style.display = 'block';
             extractBtn.disabled = false;
             status.textContent = 'Image loaded. Ready to extract text.';
           };
-          
+
           reader.readAsDataURL(file);
         }
       });
-      
+
       // Drag and drop functionality
       uploadArea.addEventListener('dragover', (e) => {
         e.preventDefault();
         uploadArea.style.borderColor = 'var(--primary)';
         uploadArea.style.backgroundColor = 'rgba(79, 70, 229, 0.05)';
       });
-      
+
       uploadArea.addEventListener('dragleave', () => {
         uploadArea.style.borderColor = 'var(--gray)';
         uploadArea.style.backgroundColor = 'transparent';
       });
-      
+
       uploadArea.addEventListener('drop', (e) => {
         e.preventDefault();
         uploadArea.style.borderColor = 'var(--gray)';
         uploadArea.style.backgroundColor = 'transparent';
-        
+
         if (e.dataTransfer.files.length) {
           imageUpload.files = e.dataTransfer.files;
           const event = new Event('change');
           imageUpload.dispatchEvent(event);
         }
       });
-      
+
       // Extract text button
       extractBtn.addEventListener('click', async () => {
         const image = imagePreview.querySelector('img');
         if (!image) return;
-        
+
         extractBtn.disabled = true;
         status.textContent = 'Extracting text... (this may take a moment)';
-        
+
         try {
           const { data: { text } } = await Tesseract.recognize(
             image.src,
             'eng',
             { logger: m => console.log(m) }
           );
-          
+
           outputText.textContent = text;
           copyBtn.disabled = false;
           status.textContent = 'Text extraction complete!';
@@ -269,7 +150,7 @@
           extractBtn.disabled = false;
         }
       });
-      
+
       // Copy text button
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(outputText.textContent)
@@ -286,4 +167,5 @@
     });
   </script>
 </body>
+
 </html>
