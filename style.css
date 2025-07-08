@@ -188,7 +188,7 @@ footer {
     background-color: #1b2432;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    
     z-index: 1000;
 
 }
@@ -263,5 +263,19 @@ footer {
 h3 {
     font-weight: 500;
     color: #9ea5bb;
+
+}
+
+
+.creditline {
+
+    
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1.5px;
+    background-color: #111224;
+    font-size: 0.7rem;
+    color: #dbdbdb;
 
 }
