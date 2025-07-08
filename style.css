@@ -13,6 +13,66 @@
     box-sizing: border-box;
 }
 
+
+
+
+
+
+
+
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    -45deg,
+    #1b2432,
+    #202b3c,
+    #2e3d52,
+    #1b2832
+  );
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #1b2432;
@@ -223,6 +283,7 @@ footer {
     font-weight: bold;
     font-size: 18px;
     margin: 0 auto;
+    margin-top: 10px;
     /* centers it horizontally */
 
 }
