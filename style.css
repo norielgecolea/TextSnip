@@ -188,7 +188,7 @@ footer {
     background-color: #1b2432;
     color: #fff;
     text-align: center;
-    
+
     z-index: 1000;
 
 }
@@ -269,7 +269,7 @@ h3 {
 
 .creditline {
 
-    
+
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -278,4 +278,79 @@ h3 {
     font-size: 0.7rem;
     color: #dbdbdb;
 
+}
+
+@media (max-width: 575.98px) {
+
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        background-color: #2c2f5e;
+        /* adjust to your preferred color */
+        color: white;
+        border-radius: 50%;
+        /* makes it a circle */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 10px;
+        margin: 0 auto;
+        /* centers it horizontally */
+
+    }
+
+
+    .first {
+        display: flex;
+        flex-direction: column;
+        /* stack items vertically */
+        align-items: center;
+        /* center horizontally */
+        justify-content: center;
+        /* center vertically */
+
+
+    }
+
+    .second {
+        display: flex;
+        flex-direction: column;
+        /* stack items vertically */
+        align-items: center;
+        /* center horizontally */
+        justify-content: center;
+        /* center vertically */
+    }
+
+
+
+    .third {
+        display: flex;
+        flex-direction: column;
+        /* stack items vertically */
+        align-items: center;
+        /* center horizontally */
+        justify-content: center;
+        /* center vertically */
+    }
+
+
+    h3 {
+        font-weight: 500;
+        color: #9ea5bb;
+        font-size: 15px;
+    }
+
+
+
+
+    .instructions div {
+        margin-right: 20px;
+        margin-left: 20px;
+
+
+
+    }
 }
