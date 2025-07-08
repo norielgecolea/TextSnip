@@ -22,7 +22,8 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: baseline
+    align-items: baseline;
+    overflow: hidden;
 }
 
 .container {
